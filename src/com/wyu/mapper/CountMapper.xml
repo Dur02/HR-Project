@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wyu.mapper.CountMapper" >
+    <resultMap id="BaseResultMap" type="com.wyu.domain.Count" >
+        <result column="userCount" property="userCount" jdbcType="INTEGER" />
+        <result column="deptCount" property="deptCount" jdbcType="INTEGER" />
+        <result column="employeeCount" property="employeeCount" jdbcType="INTEGER" />
+        <result column="jobCount" property="jobCount" jdbcType="INTEGER" />
+        <result column="noticeCount" property="noticeCount" jdbcType="INTEGER" />
+        <result column="uploadfileCount" property="uploadfileCount" jdbcType="INTEGER" />
+        <result column="roleCount" property="roleCount" jdbcType="INTEGER" />
+    </resultMap>
+    <select id="selectCount" resultMap="BaseResultMap">
+        select * from  count;
+    </select>
+</mapper>
